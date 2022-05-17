@@ -1,1 +1,28 @@
 git --version //versao do git instalada
+git init //inicializa um repositorio no local onde for chamado
+git status //mostra informações relevantes ao status
+
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+
+git config --global user.name "Seu nome aqui"
+git config --global user.email "seu@email.aqui"
+
+git add nome_do_arquivo(com a extensão) //arquivo unico
+git add . //todos os arquivos da pasta atual
+
+git commit -m "mensagem do commit"
+
+
+
+
+
+
+						Conceitos
+
+HEAD: Estado atual do nosso código, ou seja, onde o Git os colocou
+
+Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+
+index: Local onde o Git armazena o que será commitado, ou seja,
+o local entre a working tree e o repositório Git em si.
