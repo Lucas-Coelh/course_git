@@ -1,6 +1,6 @@
-git --version //versao do git instalada
-git init //inicializa um repositorio no local onde for chamado
-git status //mostra informações relevantes ao status
+git --version //Versao do git instalada
+git init //Inicializa um repositorio no local onde for chamado
+git status //Mostra informações relevantes ao status
 
 git config --local user.name "Seu nome aqui"
 git config --local user.email "seu@email.aqui"
@@ -8,10 +8,31 @@ git config --local user.email "seu@email.aqui"
 git config --global user.name "Seu nome aqui"
 git config --global user.email "seu@email.aqui"
 
-git add nome_do_arquivo(com a extensão) //arquivo unico
-git add . //todos os arquivos da pasta atual
+git config user.name
+git config user.email
+
+git add nome_do_arquivo(com a extensão) //Arquivo unico
+git add . //Todos os arquivos da pasta atual
 
 git commit -m "mensagem do commit"
+
+git log //Mostra informações sobre os commits que realizei
+git log --oneline
+git log -p (aperte 'q' para voltar ao normal)
+git log --pretty="parametros de formatação"
+git log --help
+
+git init --bare //Cria um repositorio puro, só contém as alteraçoes dos arquivos
+
+git remote add origin <endereço> //Mostra onde irei guardar meus dados, normalmente sendo um link do GitHub ou BitBucket
+git remote //Locais onde posso armazenar os dados
+git remote -v //Mostra endereço do local
+git remote rm <nome do local> //Apagar local
+git remote rename <nome antigo> <novo nome> // trocar nome
+
+
+
+git clone <endereço do repositorio> //Clona os arquivos que estão no endereço
 
 
 
