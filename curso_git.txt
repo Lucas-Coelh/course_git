@@ -40,10 +40,14 @@ git branch <nome da branch> //Cria uma nova branch
 git checkout <nome da branch> //Vai para dentro da branch que voce colocou
 git checkout -b <nome da branch> //Cria uma nova branch e muda direto pra ela
 git checkout -- <file> // Consigo dar um "ctrl+z" no meu arquivo caso eu ainda nao tenha dado git add nele
+git checkout <7 numeros do hash> // Volta o projeto para o estado daquele commit
 
 git reset HEAD index.html // Retirar o git add de um projeto que eu tenha colocado pra commit
 
 git revert <rash do commit> //Cria um commit desfazendo as alterações que eu havia feito naquele commit
+
+git restore <file> // Discarta as alteçoes que ainda nao dei git add
+git restore --staged <file> // Volta pro no staged
 
 git stash // Deixa salva as alteraçoes que fiz atualmente em um lista de stashs e retorna o meu projeto ao ultimo commit, dessa forma posso deixar em standby alguma task que iniciei, 
 sem perder nenhum conteudo dela, e iniciar outras sem acontecer nenhuma interefencia
@@ -52,6 +56,13 @@ git stash apply {numero da stash} // Resgata a stash mas nao tira ela da list
 git stash drop {numero da stash} // Tira a stash da list
 git stash pop {numero da stash} // Resgata a stash e tira da list e faz o merge com alguma novo arquivo que voce tenha editado
 
+
+git diff // Mostra tudo que fiz no codigo até eu um proximo 'git add'
+git diff <7 num hash>..<7 num hash> // Mostra todas as mudanças feitas entre esses dois commits
+
+git tag //mostras as tags
+git tag -a nomeTag // Cria uma tag com o nome que colocar
+git tag -a nomeTag -m "Mensagem tag" // Cria uma tag com o nome que colocar e coloca uma mensagem
 
 Visualizing Git // bem legal de se pesquisar no google
 
