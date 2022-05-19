@@ -21,6 +21,7 @@ git log --oneline
 git log -p (aperte 'q' para voltar ao normal)
 git log --pretty="parametros de formatação"
 git log --help
+git log --graph
 
 git init --bare //Cria um repositorio puro, só contém as alteraçoes dos arquivos
 
@@ -30,12 +31,48 @@ git remote -v //Mostra endereço do local
 git remote rm <nome do local> //Apagar local
 git remote rename <nome antigo> <novo nome> // trocar nome
 
+git push -u [repositorio] master
+
+
+git branch -M main //Muda o nome de "master" para main
+git branch <nome da branch> //Cria uma nova branch
+
+git checkout <nome da branch> //Vai para dentro da branch que voce colocou
+git checkout -b <nome da branch> //Cria uma nova branch e muda direto pra ela
+git checkout -- <file> // Consigo dar um "ctrl+z" no meu arquivo caso eu ainda nao tenha dado git add nele
+
+git reset HEAD index.html // Retirar o git add de um projeto que eu tenha colocado pra commit
+
+git revert <rash do commit> //Cria um commit desfazendo as alterações que eu havia feito naquele commit
+
+git stash // Deixa salva as alteraçoes que fiz atualmente em um lista de stashs e retorna o meu projeto ao ultimo commit, dessa forma posso deixar em standby alguma task que iniciei, 
+sem perder nenhum conteudo dela, e iniciar outras sem acontecer nenhuma interefencia
+git stash list // Lista as stash
+git stash apply {numero da stash} // Resgata a stash mas nao tira ela da list
+git stash drop {numero da stash} // Tira a stash da list
+git stash pop {numero da stash} // Resgata a stash e tira da list e faz o merge com alguma novo arquivo que voce tenha editado
+
+
+Visualizing Git // bem legal de se pesquisar no google
 
 
 git clone <endereço do repositorio> //Clona os arquivos que estão no endereço
 
+git merge <outra branch> // Tras o conteudo da outra branch, para a main // Que o git merge gera um novo commit, informando que houve uma mescla entre duas branches;
+
+git rebase <outra branch> // Tras os commits de outra branch para a main //Não gera um commit de merge, simplificando o nosso log;
 
 
+
+
+
+				Passo a Passo Inicial para Todo Projeto
+git init
+git config --local user.name "Seu nome aqui"
+git config --local user.email "seu@email.aqui"
+git commit -m "mensagem de commit"
+git remote add origin <endereço>
+git push -u origin master
 
 
 
